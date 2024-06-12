@@ -11,6 +11,6 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 })
 
 export class AppComponent {
-  title = 'web-principal';
+  title = 'miApp de Angular';
   nombre = 'Juansa';
 }
