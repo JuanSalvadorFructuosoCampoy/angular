@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { EmpleadosComponent } from './empleados/empleados.component';
 @Component({
-  selector: 'app-root',
+  selector: 'web-principal',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, EmpleadosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'myapp';
+  title = 'web-principal';
+  nombre = 'Juansa';
 }
