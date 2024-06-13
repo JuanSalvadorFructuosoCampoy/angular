@@ -13,11 +13,15 @@ export class EmpleadoComponent {
   private edad = 33; //Los modificadores de acceso private, public y protected se pueden usar aquí
   //empresa = "Freelance";
   mensajEdad = "";
-
+  habilitacionCuadro = true; //Esta propiedad debe bindearse con la propiedad del cuadro de texto del template empleado.component.html
+  usuRegistrado = false; //Esta propiedad debe bindearse con la propiedad del cuadro de texto del template empleado.component.html
   getEdad() { return this.edad; }
 
-  cambiaEmpresa(value: string) {
-
+  cambiaEmpresa(value: string) {}
+  
+  getRegistroUsuario() {
+    this.usuRegistrado = false;
   }
+  //Llamamos a la función en el template y establecemos el valor de usuRegistrado, así se actualiza la checkbox
 
 }
