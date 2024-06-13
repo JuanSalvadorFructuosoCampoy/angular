@@ -15,6 +15,9 @@ export class EmpleadoComponent {
   mensajEdad = "";
   habilitacionCuadro = true; //Esta propiedad debe bindearse con la propiedad del cuadro de texto del template empleado.component.html
   usuRegistrado = false; //Esta propiedad debe bindearse con la propiedad del cuadro de texto del template empleado.component.html
+
+  textoRegistro = "No hay nadie registrado";
+  
   getEdad() { return this.edad; }
 
   cambiaEmpresa(value: string) {}
@@ -24,7 +27,8 @@ export class EmpleadoComponent {
   }
 
   setUsuarioRegistrado() {
-    alert("El usuario se ha registrado correctamente");//Creamos la función que se va a activar cuando hagamos click en el checkbox
+    // alert("El usuario se ha registrado correctamente");//Creamos la función que se va a activar cuando hagamos click en el checkbox
+    this.textoRegistro = "El usuario se ha registrado"; //Establecemos el valor de la propiedad textoRegistro para que se muestre en el template al hacer click en el checkbox
   }
   //Llamamos a la función en el template y establecemos el valor de usuRegistrado, así se actualiza la checkbox
 
