@@ -22,6 +22,10 @@ export class EmpleadoComponent {
   getRegistroUsuario() {
     this.usuRegistrado = false;
   }
+
+  setUsuarioRegistrado() {
+    alert("El usuario se ha registrado correctamente");//Creamos la función que se va a activar cuando hagamos click en el checkbox
+  }
   //Llamamos a la función en el template y establecemos el valor de usuRegistrado, así se actualiza la checkbox
 
 }
