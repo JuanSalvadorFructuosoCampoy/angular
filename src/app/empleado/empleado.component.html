@@ -5,8 +5,9 @@
 <p>Empresa: {{empresa.value}}</p>
 
 <label for="empresa">Introduzca la empresa del trabajador:</label>
-<input type="text" #empresa>
+<!--<input type="text" #empresa>--><!--Este input, junto con el botón y la función cambiaEmpresa, permiten cambiar el valor de la empresa al pulsar el botón-->
+<input type="text" #empresa (keyup)="0"><!--Este input no necesita el botón ni la función, sino que tras transcurrir 0 segundos,actualiza en tiempo real la empresa-->
 <br />
 <br />
 
-<input type="button" value="Cambiar empresa" (click)="cambiaEmpresa(empresa.value)">
+<!--<input type="button" value="Cambiar empresa" (click)="cambiaEmpresa(empresa.value)">-->
