@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './empleado.component.css'
 })
 export class EmpleadoComponent {
+  nombre = "Juansa";
+  apellido = "Campoy";
+  private edad = 33; //Los modificadores de acceso private, public y protected se pueden usar aquí
+  //empresa = "Freelance";
+  mensajEdad = "";
+
+  getEdad() { return this.edad; }
+
+  cambiaEmpresa(value: string) {
+
+  }
 
 }
