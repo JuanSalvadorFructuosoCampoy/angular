@@ -2,9 +2,13 @@
 <p>Nombre: {{nombre}}</p>
 <p>Apellido: {{apellido}}</p>
 <p>Edad: {{ getEdad() }}</p>
-<p>Empresa: {{empresa}}</p>
+<p>Empresa: {{empresa.value}}</p>
 
-Introduce la empresa: <input type="text" [(ngModel)]="empresa" /><br /> <!--Establecemos el Banana in a Box con ngModel para poder hacer un binding bidireccional-->
+<label for="empresa">Introduzca la empresa del trabajador:</label>
+<!--<input type="text" #empresa>--><!--Este input, junto con el botón y la función cambiaEmpresa, permiten cambiar el valor de la empresa al pulsar el botón-->
+<!-- <input type="text" #empresa (keyup)="0" disabled=false> Este input no necesita el botón ni la función,sino que actualiza en tiempo real la empresa -->
+<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+<!--Este input no necesita el botón ni la función,sino que actualiza en tiempo real la empresa y se deshabilita si la propiedad habilitacionCuadro es true-->
 <br />
 <br />
 {{textoRegistro}}
@@ -13,6 +17,6 @@ Introduce la empresa: <input type="text" [(ngModel)]="empresa" /><br /> <!--Esta
 <!--El valor de la propiedad se indica entre corchetes cuando lo vinculamos a la propiedad de la clase .ts-->
 Registrado: <input type="radio" value="si" name="nRegistro" id="registrado" [checked]="usuRegistrado"
     (click)="setUsuarioRegistrado($event)"><br /><!--El evento se indica entre paréntesis, y la función que se debe ejecutar debe estar en el valor de la propiedad-->
-<!--Cuando ejecutamos un evento, se crea un objeto de tipo event que se representa como $event-->
+    <!--Cuando ejecutamos un evento, se crea un objeto de tipo event que se representa como $event-->
 No registrado: <input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)">
 {{ getRegistroUsuario()}}
